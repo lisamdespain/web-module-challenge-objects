@@ -116,14 +116,11 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 
-function addReview(array, name1, rating1, feedback1){
-    array.push(
-      array.name = name1,
-      array.rating = rating1,
-      array.feedback = feedback1);
-return array;
-}
-addReview(reviews,'Daniela',5,'Beautiful atmosphere and wonderful vegan options!')
+function addReview(array, name, rating, feedback){
+    array.push({name, rating, feedback});
+    return array;
+    }
+addReview(reviews,'Daniela',5,'Beautiful atmosphere and wonderful vegan options!');
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -137,10 +134,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(array2, index) {
-  return console.log(`${array2[index].name} gave the restaurant a ${array2[index].rating} star review, and their feedback was: ${array2[index].feedback}`)
+function getReviewByIndex(array, number) {
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
-getReviewByIndex(reviews,0);
+console.log(getReviewByIndex(reviews,2));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
